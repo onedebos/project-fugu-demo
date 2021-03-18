@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>GWC Demo App</title>
+    <meta name="description" content="This app demonstrates some of the coolest features of Project Fugu!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" sizes="192x192" href="/images/icon-192x192.png">
+    <meta name="theme-color" content="#3367D6">
+    <meta property="og:title" content="GWC Demo App">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This app demonstrates some of the coolest features of Project Fugu!">
+  </head>
+  <body>
+    
+    <main>
+      <h1>Google Web Capabilities Demo</h1>
+
+      <!-- Badging API ********* -->
+      <button id="badge">Add a badge!</button>
+      <button id="clear-badge">Clear badge!</button>
+      
+      
+
+      <!-- Native File System API ********* 
+      <button id="open-file-picker">Open file</button>
+      <textarea id="textarea" cols="30" rows="10"></textarea>
+      <button id="save-file">Save file</button>
+      -->
+      
+
+      <!-- Shape Detection API ********* -->  
+      <!-- <img src="/images//me.jpg" alt="">  -->
+        
+      
+    </main>
+
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' }).then((registration) => {
+          console.log('Service Worker Registered');
+        });
+
+        navigator.serviceWorker.ready.then((registration) => {
+          console.log('Service Worker Ready');
+        });
+      }
+    </script>
+
+    <!-- <script src="/scripts/shape-detection.js"></script> -->
+
+  </body>
+</html>

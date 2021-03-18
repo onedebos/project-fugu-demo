@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GWC Demo App</title>
+    <meta
+      name="description"
+      content="This app demonstrates some of the coolest features of Project Fugu!"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" sizes="192x192" href="/images/icon-192x192.png" />
+    <meta name="theme-color" content="#CA623D" />
+    <meta property="og:title" content="GWC Demo App" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="This app demonstrates some of the coolest features of Project Fugu!"
+    />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="ml-5 pt-5">
+      <h1 class="font-semibold text-4xl text-yellow-700">Google Web Capabilities Demo</h1>
+      <p>Make sure to install this app before testing out the APIs.</p>
+
+      <!-- Badging API -->
+      <!-- <div class="border border-2 max-w-lg py-5 px-5 rounded-md mt-5">
+        <h1 class="font-semibold text-2xl mt-2">Badging API</h1>
+        <p class="mb-3">Displays notification badges on the dock.</p>
+        <button class="bg-purple-600 text-white px-2 py-2 rounded-md" id="new-message">New message</button>
+        <button class="bg-yellow-700 px-2 py-2 rounded-md text-white ml-2" id="clear-messages">Clear messages!</button>
+      </div> -->
+      
+
+      <!-- Native File System API -->
+      <div class="border border-2 max-w-lg py-5 px-5 rounded-md mt-5">
+        <h1 class="font-semibold text-2xl mt-5">File system access API</h1>
+        <p class="mb-3">A simple text editor that can read and save content to a file.</p>
+        
+        <textarea class="border border-2 w-full rounded-md px-2 py-2" id="textarea" cols="30" rows="10"></textarea>
+        <div>
+          <button class="bg-purple-600 text-white px-2 py-2 rounded-md" id="open-file-picker">Open and read file</button>
+          <button class="bg-yellow-700 px-2 py-2 rounded-md text-white ml-2" id="save-as">Save as</button>
+          <button class="bg-yellow-700 px-2 py-2 rounded-md text-white ml-2" id="save">Save</button>
+        </div>
+        
+      </div>
+      
+      
+
+      <!-- Shape Detection API ********* -->
+      <!-- <img src="/images//me.jpg" alt="">  -->
+    </main>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js", { scope: "/" })
+          .then((registration) => {
+            console.log("Service Worker Registered");
+          });
+
+        navigator.serviceWorker.ready.then((registration) => {
+          console.log("Service Worker Ready");
+        });
+      }
+    </script>
+
+    <script src="/scripts/badging.js"></script>
+    <script src="/scripts/file-system.js"></script>
+  </body>
+</html>
