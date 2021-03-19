@@ -1,8 +1,8 @@
 const supported = ('contacts' in navigator && 'ContactsManager' in window);
 const selectContactBtn = document.getElementById('select-contact')
-// details about a contact we wish to get
+// details we wish to get about a contact
 const props = ['name', 'email', 'tel'];
-// allows a user select multiple contacts by holding down
+// allows a user select multiple contacts
 const opts = {multiple: true};
 
 if(!supported){
