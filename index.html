@@ -24,16 +24,16 @@
       <p>Make sure to install this app before testing out the APIs.</p>
 
       <!-- Badging API -->
-      <!-- <div class="border border-2 max-w-lg py-5 px-5 rounded-md mt-5">
+      <div class="border border-2 max-w-lg py-5 px-5 rounded-md mt-5">
         <h1 class="font-semibold text-2xl mt-2">Badging API</h1>
         <p class="mb-3">Displays notification badges on the dock.</p>
         <button class="bg-purple-600 text-white px-2 py-2 rounded-md" id="new-message">New message</button>
         <button class="bg-yellow-700 px-2 py-2 rounded-md text-white ml-2" id="clear-messages">Clear messages!</button>
-      </div> -->
+      </div>
       
 
       <!-- Native File System API -->
-      <div class="border border-2 max-w-lg py-5 px-5 rounded-md mt-5">
+      <section class="border border-2 max-w-lg py-5 px-5 rounded-md mt-5">
         <h1 class="font-semibold text-2xl mt-5">File system access API</h1>
         <p class="mb-3">A simple text editor that can read and save content to a file.</p>
         
@@ -43,13 +43,20 @@
           <button class="bg-yellow-700 px-2 py-2 rounded-md text-white ml-2" id="save-as">Save as</button>
           <button class="bg-yellow-700 px-2 py-2 rounded-md text-white ml-2" id="save">Save</button>
         </div>
-        
-      </div>
-      
-      
+      </section>
 
-      <!-- Shape Detection API ********* -->
-      <!-- <img src="/images//me.jpg" alt="">  -->
+      <!-- Contacts Picker API -->
+      <section class="border border-2 max-w-lg py-5 px-5 rounded-md mt-5">
+        <h1 class="font-semibold text-2xl mt-5 mb-3">Contacts Picker API</h1>
+        <h2 class="font-semibold text-yellow-700 hidden not-supported-message">Your browser does not support the Contacts Picker API</h2>
+        <h2 class="hidden not-supported-message">Please try again on an Android device with Chrome 80+ </h2>
+        <button id="select-contact" class="bg-yellow-700 px-2 py-2 rounded-md text-white">Select a contact</button>
+        <div id="contacts" class="hidden">
+          <p>Your contacts will only be displayed on this page for Demo purposes and are not stored anywhere else.</p>x
+        </div>
+        <ul id="results"></ul>
+      </section>
+      
     </main>
 
     <script>
@@ -68,5 +75,6 @@
 
     <script src="/scripts/badging.js"></script>
     <script src="/scripts/file-system.js"></script>
+    <script src="/scripts/contacts-picker.js"></script>
   </body>
 </html>

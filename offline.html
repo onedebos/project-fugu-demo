@@ -14,40 +14,7 @@
   <body>
     
     <main>
-      <h1>Google Web Capabilities Demo</h1>
-
-      <!-- Badging API ********* -->
-      <button id="badge">Add a badge!</button>
-      <button id="clear-badge">Clear badge!</button>
-      
-      
-
-      <!-- Native File System API ********* 
-      <button id="open-file-picker">Open file</button>
-      <textarea id="textarea" cols="30" rows="10"></textarea>
-      <button id="save-file">Save file</button>
-      -->
-      
-
-      <!-- Shape Detection API ********* -->  
-      <!-- <img src="/images//me.jpg" alt="">  -->
-        
-      
+      <h1>Hey there 👋, you're offline.</h1>
     </main>
-
-    <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js', { scope: '/' }).then((registration) => {
-          console.log('Service Worker Registered');
-        });
-
-        navigator.serviceWorker.ready.then((registration) => {
-          console.log('Service Worker Ready');
-        });
-      }
-    </script>
-
-    <!-- <script src="/scripts/shape-detection.js"></script> -->
-
   </body>
 </html>

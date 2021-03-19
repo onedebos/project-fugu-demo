@@ -9,4 +9,4 @@ You'll find examples for using
 
 ## Live
 
-The live version of this project is available (here)[]
+The live version of this project is available [here](https://project-fugu.netlify.app/)

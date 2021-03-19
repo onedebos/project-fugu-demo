@@ -20,6 +20,7 @@ self.addEventListener("fetch", function (event) {
     caches.match(event.request).then(function (response) {
       if (response) return response;
 
+      // return the cached offline file if app is offline
       return fetch(event.request).catch((err) => {
         return caches.match("offline.html");
       });
@@ -28,7 +29,3 @@ self.addEventListener("fetch", function (event) {
 });
 
 self.addEventListener("activate", (event) => {});
-
-// self.addEventListener("fetch", (event) => {
-//   event.respondWith(fetch(event.request));
-// });
