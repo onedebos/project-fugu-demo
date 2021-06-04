@@ -1,4 +1,4 @@
-## Google Web Capabilities Demo
+## Web Capabilities Demo
 
 This project demonstrates some of the latest APIs in the GWC/Project-Fugu project.
 
